@@ -1,0 +1,1 @@
+/opsx:new use flokay:propose skill. I have a brilliant idea. Let's build an app that can keep track of a list of things to do. We can call it a TO DO list. (Just play along). 
