@@ -1,0 +1,4 @@
+command: npm audit --audit-level=moderate
+parallel: true
+run_in_ci: true
+run_locally: false

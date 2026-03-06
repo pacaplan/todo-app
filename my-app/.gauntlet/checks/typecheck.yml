@@ -1,0 +1,4 @@
+command: npx tsc --noEmit
+parallel: true
+run_in_ci: true
+run_locally: true
