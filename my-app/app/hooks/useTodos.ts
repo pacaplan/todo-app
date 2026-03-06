@@ -30,8 +30,8 @@ function loadTodos(): Todo[] {
       if (!Array.isArray(parsed)) return [];
       return parsed.filter(isValidTodo);
     }
-  } catch {
-    // localStorage unavailable or invalid data - fall back to empty
+  } catch (err) {
+    console.error("Failed to load todos from localStorage", err);
   }
   return [];
 }
@@ -39,8 +39,8 @@ function loadTodos(): Todo[] {
 function saveTodos(todos: Todo[]): void {
   try {
     localStorage.setItem(STORAGE_KEY, JSON.stringify(todos));
-  } catch {
-    // localStorage unavailable - silently ignore
+  } catch (err) {
+    console.error("Failed to save todos to localStorage", err);
   }
 }
 
